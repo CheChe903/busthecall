@@ -2,7 +2,6 @@ package capston.busthecall.configuration;
 
 import capston.busthecall.jwt.JwtUtil;
 import capston.busthecall.jwt.LoginFilter;
-import capston.busthecall.jwt.MemberLoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

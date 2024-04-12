@@ -14,7 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor
@@ -33,13 +33,13 @@ public class MemberController {
         return ApiResponseGenerator.success(res, HttpStatus.CREATED);
     }
 
-    @PostMapping(value="/login")
-    public ApiResponse<ApiResponse.SuccessBody<SavedUserInfo>> login
-            (@Valid @RequestBody LoginUserRequest request)
-    {
-        SavedUserInfo res = loadUserService.execute(request);
-        return ApiResponseGenerator.success(res, HttpStatus.CREATED);
-    }
+//    @PostMapping(value="/login")
+//    public ApiResponse<ApiResponse.SuccessBody<SavedUserInfo>> login
+//            (@Valid @RequestBody LoginUserRequest request)
+//    {
+//        SavedUserInfo res = loadUserService.execute(request);
+//        return ApiResponseGenerator.success(res, HttpStatus.CREATED);
+//    }
 
 
 }

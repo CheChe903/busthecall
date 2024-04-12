@@ -2,7 +2,7 @@ package capston.busthecall.security.filter.token;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
 
 public class TokenAuthenticationFilter extends AbstractPreAuthenticatedProcessingFilter {

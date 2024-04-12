@@ -2,6 +2,7 @@ package capston.busthecall.configuration;
 
 import capston.busthecall.jwt.JwtUtil;
 import capston.busthecall.jwt.LoginFilter;
+import capston.busthecall.jwt.MemberLoginFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -67,6 +68,9 @@ public class SecurityConfig {
          * FilterAfter -> 해당 Filter 후
          */
         http.addFilterAt(new LoginFilter(authenticationManager(authenticationConfiguration), jwtUtil)
+                , UsernamePasswordAuthenticationFilter.class);
+
+        http.addFilterAt(new MemberLoginFilter(authenticationManager(authenticationConfiguration), jwtUtil)
                 , UsernamePasswordAuthenticationFilter.class);
 
         //JWT -> 세션을 항상 stateless 로 관리.

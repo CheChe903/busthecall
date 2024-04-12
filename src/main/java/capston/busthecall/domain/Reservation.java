@@ -2,7 +2,7 @@ package capston.busthecall.domain;
 
 
 import capston.busthecall.domain.Status.DoingStatus;
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

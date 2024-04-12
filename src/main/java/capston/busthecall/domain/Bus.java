@@ -1,7 +1,7 @@
 package capston.busthecall.domain;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.Builder;
 import lombok.Getter;

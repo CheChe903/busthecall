@@ -1,8 +1,7 @@
 package capston.busthecall.domain;
 
-
-import javax.persistence.*;
-
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,13 +17,11 @@ public class Driver {
     private Long id;
 
     private String name;
+    private String email;
+    private String password;
+    private String role;
 
-    @OneToOne(mappedBy = "driver")
+    @OneToOne(mappedBy = "driver", fetch = FetchType.LAZY)
     private Bus bus;
 
-    @Builder
-    public Driver(String name, Bus bus) {
-        this.name = name;
-        this.bus = bus;
-    }
 }
